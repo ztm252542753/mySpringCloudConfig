@@ -18,10 +18,12 @@ spring:
         - id: routes-order-server
           uri: lb://order-server
           predicates:
-            - Path=/order/**
 eureka:
   client:
-    service-url: http://localhost:8761/eureka/
-  instance:
-    instance-id: gateway-server
-    prefer-ip-address: true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+      register-with-eureka: true
+      fetch-registry: true
+    instance:
+      instance-id: gateway-server
+      prefer-ip-address: true
