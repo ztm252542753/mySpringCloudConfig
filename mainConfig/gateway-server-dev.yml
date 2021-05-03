@@ -25,6 +25,6 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
       register-with-eureka: true
       fetch-registry: true
-    instance:
-      hostname: localhost
-
+  instance:
+     hostname: localhost
+     instance-id: gateway-server
