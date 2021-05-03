@@ -26,5 +26,6 @@ eureka:
       register-with-eureka: true
       fetch-registry: true
     instance:
-      instance-id: gateway-server
+      instance-id: localhost
       prefer-ip-address: true
+
