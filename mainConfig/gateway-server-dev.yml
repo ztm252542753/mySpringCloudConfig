@@ -16,9 +16,9 @@ spring:
             - Path=/client/001/**
 
         - id: routes-order-server
-            uri: lb://order-server
-            predicates:
-              - Path=/order/**
+          uri: lb://order-server
+          predicates:
+            - Path=/order/**
 eureka:
   client:
     service-url: http://localhost:8761/eureka/
